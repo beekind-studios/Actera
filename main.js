@@ -7,8 +7,8 @@ const menu = new Menu()
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1280,
+    height: 720,
     frame: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
@@ -22,6 +22,10 @@ menu.append(new MenuItem({
     mainWindow.webContents.openDevTools()
   }
 }))
+
+function moveWindow(){
+  mainWindow.setPosition(Electron.screen.getCursorScreenPoint)
+}
 
 Menu.setApplicationMenu(menu)
 
@@ -48,6 +52,11 @@ app.whenReady().then(() => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
 })
+
+// Custom Methods
+
+
+
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
