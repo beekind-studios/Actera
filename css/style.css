@@ -11,4 +11,6 @@ html {
     top: 0;
     overflow: hidden;
     background-color: #999999;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
 }
