@@ -4,10 +4,6 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
-// var ipc = require('electron').ipcRenderer
-// var titleBar = document.getElementsByClassName("title-bar")
-// titleBar.addEventListener("click", e => {
 
-// })
-
-// ipc.on()
+// include the ipc module to communicate with main process.
+const ipcRenderer = require('electron').ipcRenderer; 

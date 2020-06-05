@@ -2,21 +2,31 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="js/jquery/jquery-3.5.1.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <!-- Custom Scripts / External Calls -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <title>Actera v0.0.1</title>
   </head>
   <body>
     <div class="title-bar">
-
+      <span id="title">Actera v0.0.1</span>
+      <div id="window-controls">
+        <a href="#" id="close-window">X</a>
+      </div>
     </div>
     <div class="actera-main-menu">
 
     </div>
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
+    <script src="js/jquery/jquery-3.5.1.min.js">
+      try {
+        $ = jQuery = module.exports;
+      } catch(e) {}
+    </script>
+    <script src="js/windowControls.js"></script>
   </body>
 </html>

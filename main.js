@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const {Menu, MenuItem, app, BrowserWindow} = require('electron')
+const {Menu, MenuItem, app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 
 const menu = new Menu()
@@ -11,7 +11,8 @@ function createWindow () {
     height: 720,
     frame: false,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true
     }
   })
 
@@ -35,9 +36,6 @@ mainWindow.loadFile('index.html')
 // remove window and border on 
 //mainWindow.removeMenu()
 
-
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -59,9 +57,6 @@ app.on('window-all-closed', function () {
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') app.quit()
 })
-
-// Custom Methods
-
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
