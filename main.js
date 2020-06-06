@@ -16,6 +16,16 @@ function createWindow () {
     }
   })
 
+// Minimize
+ipc.on('minimize-current-window', function() {
+  mainWindow.minimize();
+})
+
+// Maximize
+ipc.on('maximize-current-window', function() {
+  mainWindow.isMaximized() ? mainWindow.unmaximize() : mainWindow.maximize();
+})
+
 menu.append(new MenuItem({
   label: 'Print',
   accelerator: 'F12',
@@ -32,9 +42,11 @@ Menu.setApplicationMenu(menu)
 
 // and load the index.html of the app.
 mainWindow.loadFile('index.html')
-  
-// remove window and border on 
-//mainWindow.removeMenu()
+
+// Once the user presses the 'Create New Project...' button.
+ipc.on('create-new-project', function() {
+  mainWindow.loadFile('new-script.html');
+})
 
 }
 
@@ -60,3 +72,10 @@ app.on('window-all-closed', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+const ipc = require('electron').ipcMain
+
+// close window
+ipc.on('close-current-window', function() {
+  app.quit()
+})

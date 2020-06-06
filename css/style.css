@@ -1,34 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
 html {
     background-color: #EEE;
     margin: 0;
     padding: 0;
 }
-.title-bar {
+.create-new-project {
     display: block;
     width: 100%;
-    height: 30px;
+    height: 75px;
+    margin-top: 20px;
+    background-color: #E1E1E1;
+    border: 2px rgb(184, 183, 183);
+}
+.create-new-project p {
+    padding: 20px;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #a2a2a2;
+}
+.projects {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
+    margin-top: 5%;
+}
+.projects #projects-title {
+    display: block;
+    font-size: 30px;
+    font-family: 'Merriweather', serif;
+    padding-bottom: 10px;
+}
+.project-window {
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: white;
+    height: 1000px;
+}
+.title-bar {
+    display: block;
+    width: auto !important;
     position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    background-color: #999999;
-    -webkit-user-select: none;
+    min-width: 99%;
+    height: 20px;
+    background-color: #E1E1E1;
     -webkit-app-region: drag;
     font-family: 'Merriweather', serif;
+    padding: 10px;
+    top: 0;
 }
 .title-bar #title {
-    display: inline;
-    padding: 20px;
+    padding-top: 10px; 
+    padding-left: 7px;
+}
+.title-bar #window-controls div {
+    position: absolute;
+    width: 5px;
+    -webkit-app-region: no-drag;
+    height: 5px;
+    padding: 10px;
+    cursor: pointer;
 }
 .title-bar #window-controls #close-window {
-    background-color: #000;
+    background-image: url(../img/close.png);
+    background-size: contain;
+    opacity: 0.6;
+    margin-top: 7px;
+    margin-right: 20px;
     top: 0;
     right: 0;
-    padding: 20px;
-    float: right;
-    text-decoration: none;
 }
-.title-bar #window-controls #close-window a:hover {
-    background-color: #FF0000;
-    text-decoration: none;
+.title-bar #window-controls #minimize-window {
+    background-image: url(../img/minimize.png);
+    background-size: contain;
+    opacity: 0.6;
+    margin-top: 7px;
+    margin-right: 90px;
+    top: 0;
+    right: 0;
+}
+.title-bar #window-controls #maximize-window {
+    background-image: url(../img/expand.png);
+    background-size: contain;
+    opacity: 0.6;
+    margin-top: 7px;
+    margin-right: 55px;
+    top: 0;
+    right: 0;
+}
+#custom-hr {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #E1E1E1;
+    margin-bottom: 20px;
+}
+#logo {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    image-rendering: optimizeQuality;
 }
