@@ -11,6 +11,7 @@ html {
     background-color: #EEE;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 .create-new-project {
     display: block;
@@ -46,9 +47,9 @@ html {
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 8.5in;
     background-color: white;
-    height: 1000px;
+    height: 11in;
 }
 .title-bar {
     display: block;
