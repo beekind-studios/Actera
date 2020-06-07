@@ -1,5 +1,6 @@
 .action {
     display: block;
+    float: left;
     font-size: 100%;
     text-align: left;
     margin-top: 1em;
@@ -8,12 +9,14 @@
 .character-dialogue {
     display: block;
     width: 300px;
+    height: auto;
     margin-right: auto;
     margin-left: auto;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 .character-dialogue .character-name {
+    display: block;
     float: left;
     width: 100%;
     text-transform: uppercase;
@@ -25,9 +28,25 @@
     text-align: left;
     width: 100%;
 }
+.parenthetical {
+    margin-left: 30%;
+    margin-right: auto;
+}
 .scene-heading {
     display: block;
+    float: left;
     font-size: 100%;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+.transition {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: right;
+    float: right;
     margin-top: 1em;
     margin-bottom: 1em;
 }
