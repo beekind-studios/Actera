@@ -48,8 +48,18 @@ html {
     margin-left: auto;
     margin-right: auto;
     width: 8.5in;
-    background-color: white;
     height: 11in;
+    background-color: white;
+    border-radius: 5px;
+    transform: scale(1.2);
+    transform-origin: 0% 0% 0px;
+}
+.editable-window {
+    display: block;
+    padding: 1in 1in 1in 1.5in;
+    font-size: 12px;
+    font-family: 'Courier', serif;
+    text-align: start;
 }
 .title-bar {
     display: block;

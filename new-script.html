@@ -7,6 +7,7 @@
     <!-- Custom Scripts / External Calls -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/script.css">
     <script src="js/jquery/jquery-3.5.1.min.js"></script>
     <script>window.$ = window.jQuery = require('jquery');</script>
     <title>Actera v0.0.1</title>
@@ -25,9 +26,18 @@
       </div>
     </div>
     <div class="project-window">
-        <p>This is the start of the new project window.</p>
+        <div class="editable-window">
+          <div class="scene-heading">INT. ELECTRON APPLICATION</div>
+          <div class="action">This is current example of how a script should be formatted for Actera. This includes multiple written information, such as the glorious actor dialogue boxes, some actions, possible parentheticals, and much more.</div>
+          <div class="action">This is what a second action box would look like, with auto-formatting applied to the top and bottom margins of this div. I'm wondering if something along the lines of making sure these styles stay consistent when useres attempt to add more and more.</div>
+          <div class="character-dialogue">
+            <span class="character-name">Keaton</span>
+            <span class="character-response">Do you think we should do something about how VS Code is written within the confines of electron?</span>
+          </div>
+        </div>
     </div>
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
+    <script src="js/texthandling.js"></script>
   </body>
 </html>
