@@ -12,18 +12,22 @@ const closeWindowButton = document.getElementById('close-window')
 const maxWindowButton = document.getElementById('maximize-window')
 const minWindowButton = document.getElementById('minimize-window')
 
-$('#close-window').click(function() {
-    ipc.send('close-current-window') 
+$('#close-window').click(function () {
+    ipc.send('close-current-window')
 })
 
-$('#maximize-window').click(function() {
-    ipc.send('maximize-current-window') 
+$('#maximize-window').click(function () {
+    ipc.send('maximize-current-window')
 })
 
-$('#minimize-window').click(function() {
-    ipc.send('minimize-current-window') 
+$('#minimize-window').click(function () {
+    ipc.send('minimize-current-window')
 })
 
-$('.create-new-project').click(function() {
-    ipc.send('create-new-project') 
+$('.create-new-project').click(function () {
+    ipc.send('create-new-project')
+})
+
+$('#file-menu-button').click(function () {
+    ipc.send('file-menu-click')
 })
