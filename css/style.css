@@ -11,7 +11,6 @@ html {
     background-color: #EEE;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 .create-new-project {
     display: block;
@@ -19,7 +18,8 @@ html {
     height: 75px;
     margin-top: 20px;
     background-color: #E1E1E1;
-    border: 2px rgb(184, 183, 183);
+    cursor: pointer;
+    border-radius: 3px;
 }
 .create-new-project p {
     padding: 20px;
@@ -27,6 +27,19 @@ html {
     font-size: 16px;
     font-style: italic;
     color: #a2a2a2;
+}
+.create-new-project:hover {
+    background-color: rgb(215, 215, 215);
+}
+.nav-menu-item {
+    display: inline-block;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+.nav-menu-item:hover {
+    background-color: rgb(206, 206, 206);
 }
 .projects {
     display: block;
@@ -42,6 +55,10 @@ html {
     font-family: 'Merriweather', serif;
     padding-bottom: 10px;
 }
+.project-window-wrapper {
+    overflow-y: scroll;
+    height: auto;
+}
 .project-window {
     display: block;
     margin-top: 5%;
@@ -51,10 +68,14 @@ html {
     height: 11in;
     background-color: white;
     border-radius: 5px;
+    -webkit-box-shadow: 0px 13px 14px -10px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 13px 14px -10px rgba(0,0,0,0.25);
+    box-shadow: 0px 13px 14px -10px rgba(0,0,0,0.25);
 }
+/* Padding left side at 1.5in is 'formal' to include punch-holes.*/
 .editable-window {
     display: block;
-    padding: 1in 1in 1in 1.5in;
+    padding: 1in 1in 1in 1in;
     font-size: 12px;
     font-family: 'Courier', serif;
     text-align: start;
@@ -64,6 +85,7 @@ html {
     display: block;
     width: auto !important;
     position: fixed;
+    -webkit-user-select: none;
     min-width: 99%;
     height: 20px;
     background-color: #E1E1E1;
@@ -71,10 +93,12 @@ html {
     font-family: 'Merriweather', serif;
     padding: 10px;
     top: 0;
+    overflow: hidden;
 }
 .title-bar #title {
     padding-top: 10px; 
     padding-left: 7px;
+    padding-right: 12px;
 }
 .title-bar #window-controls div {
     position: absolute;

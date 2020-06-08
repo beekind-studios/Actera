@@ -15,17 +15,18 @@
   <body>
     <div class="title-bar">
       <span id="title">Actera v0.0.1</span>
-      <span id="title">File</span>
-      <span id="title">Edit</span>
-      <span id="title">View</span>
-      <span id="title">Export</span>
+      <span class="nav-menu-item" id="file-menu-button">File</span>
+      <span class="nav-menu-item" id="edit-menu-button">Edit</span>
+      <span class="nav-menu-item" id="view-menu-button">View</span>
+      <span class="nav-menu-item" id="export-menu-button">Export</span>
       <div id="window-controls">
           <div id="minimize-window"></div>
           <div id="maximize-window"></div>
           <div id="close-window"></div>
       </div>
     </div>
-    <div class="project-window">
+    <div id="project-window-wrapper">
+      <div class="project-window">
         <div class="editable-window" contenteditable="true">
           <div class="scene-heading">INT. ELECTRON APPLICATION</div>
           <div class="action">This is current example of how a script should be formatted for Actera. This includes multiple written information, such as the glorious actor dialogue boxes, some actions, possible parentheticals, and much more.</div>
@@ -55,8 +56,9 @@
           </div>
           <div class="action">*Laugh track plays.*</div>
         </div>
+      </div>
     </div>
     <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <script src="js/renderer.js"></script>
   </body>
 </html>
