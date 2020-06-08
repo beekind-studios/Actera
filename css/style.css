@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+    background: transparent;
+    width: 0px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -56,7 +60,7 @@ html {
     padding-bottom: 10px;
 }
 .project-window-wrapper {
-    overflow-y: scroll;
+    overflow-y: hidden;
     height: auto;
 }
 .project-window {
@@ -64,6 +68,7 @@ html {
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5%;
     width: 8.5in;
     height: 11in;
     background-color: white;
