@@ -26,40 +26,14 @@
       </div>
     </div>
     <div class="project-window-wrapper">
-      <div class="project-window">
-        <div class="editable-window" contenteditable="true">
-          <div class="scene-heading">INT. ELECTRON APPLICATION</div>
-          <div class="action">This is current example of how a script should be formatted for Actera. This includes multiple written information, such as the glorious actor dialogue boxes, some actions, possible parentheticals, and much more.</div>
-          <div class="action">This is what a second action box would look like, with auto-formatting applied to the top and bottom margins of this div. I'm wondering if something along the lines of making sure these styles stay consistent when users attempt to add more and more.</div>
-          <div class="character-dialogue-wrapper">
-            <div class="character-dialogue">
-              <span class="character-name">Keaton</span>
-              <span class="character-response">Do you think we should do something about how VS Code is written within the confines of electron?</span>
-            </div>
-          </div>
-          <div class="action">Character dialogue is nice and all, but we may need to add something to address transitions! Like this!</div>
-          <div class="transition">FADE OUT</div>
-          <div class="scene-heading">INT. Justin's Office</div>
-          <div class="character-dialogue-wrapper">
-            <div class="character-dialogue">
-              <span class="character-name">Justin</span>
-              <span class="parenthetical">(acting nonchalant)</span>
-              <span class="character-response">Once we have this electron application wrangled, imagine all of the extra applications that we can build! The world is endless!</span>
-            </div>
-          </div>
-          <div class="action">Justin cackles nefariously.</div>
-          <div class="character-dialogue-wrapper">
-            <div class="character-dialogue">
-              <span class="character-name">Keaton</span>
-              <span class="character-response">Get Fucked.</span>
-            </div>
-          </div>
-          <div class="action">*Laugh track plays.*</div>
-        </div>
+      <div class="project-window letter">
+        <div class="editable-window">
+          <div id="editorjs"></div>
+          <script src="./js/script.js"></script>
       </div>
     </div>
     <!-- You can also require other files to run in this process -->
     <script src="js/renderer.js"></script>
-    <script src="js/menu.js"></script>
+    <!-- <script src="js/menu.js"></script> -->
   </body>
 </html>

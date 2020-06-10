@@ -63,26 +63,26 @@ html {
     overflow-y: hidden;
     height: auto;
 }
+/* The white box that represents a letter page. */
 .project-window {
     display: block;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
-    width: 8.5in;
-    height: 11in;
     background-color: white;
     border-radius: 5px;
+    width: 816px;
+    height: 1056px;
     -webkit-box-shadow: 0px 13px 14px -10px rgba(0,0,0,0.25);
     -moz-box-shadow: 0px 13px 14px -10px rgba(0,0,0,0.25);
     box-shadow: 0px 13px 14px -10px rgba(0,0,0,0.25);
+    size: 1.3;
 }
 /* Padding left side at 1.5in is 'formal' to include punch-holes.*/
 .editable-window {
     display: block;
-    padding: 1in 1in 1in 1in;
-    font-size: 12px;
-    font-family: 'Courier', serif;
+    padding: 1in 1in 1in 1.5in;
     text-align: start;
     white-space: normal !important;
 }
@@ -99,6 +99,7 @@ html {
     padding: 10px;
     top: 0;
     overflow: hidden;
+    z-index: 3001;
 }
 .title-bar #title {
     padding-top: 10px; 

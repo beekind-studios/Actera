@@ -1,9 +1,11 @@
+* {
+    font-size: 16px;
+    font-family: 'Courier', serif;
+}
 .action {
     display: block;
-    float: left;
-    font-size: 100%;
     text-align: left;
-    margin-bottom: 1em;
+    line-height: 1.6em;
 }
 .character-dialogue {
     display: block;
@@ -37,17 +39,22 @@
 }
 .scene-heading {
     display: block;
-    float: left;
     font-size: 100%;
     width: 100%;
-    margin-bottom: 1em;
     text-transform: uppercase;
+    font-weight: bold;
 }
 .transition {
     display: block;
     width: 100%;
     text-transform: uppercase;
     text-align: right;
-    float: right;
     margin-bottom: 1em;
+}
+
+/* Editor.js Specific CSS */
+.ce-toolbox__button #custom-tool {
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #E1E1E1;
 }

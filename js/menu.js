@@ -1,4 +1,5 @@
 const { app, Menu } = require('electron')
+// const renderer = require('./renderer.js')
 
 const fileMenuTemplate = [
     {
